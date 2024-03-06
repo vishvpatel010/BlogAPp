@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './featured.module.css';
 import Image from 'next/image';
+import { name } from '@/data.js';
 const Featured = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <b>Hey, Vishv patel here!</b> Discover my stories and creative ideas.
+        <b>Hey, {name} here!</b> Discover my stories and creative ideas.
       </h1>
       <div className={styles.post}>
         <div className={styles.imgContainer}>

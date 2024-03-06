@@ -5,6 +5,7 @@ import Link from "next/link";
 import AuthLink from "../AuthLink/AuthLink";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import {logotext, socialprofils} from '@/data.js';
+import ResponsiveMenu from "../ResponsiveMenu/ResponsiveMenu";
 
 const Navbar = () => {
   return (
@@ -34,6 +35,7 @@ const Navbar = () => {
         <Link href="/contact" className={styles.link}>Contact</Link>
         <Link href="/about" className={styles.link}>About</Link>
         <AuthLink />
+        <ResponsiveMenu />
       </div>
     </div>
   );

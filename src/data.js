@@ -7,7 +7,15 @@ const socialprofils = {
     twitter: "https://twitter.com/vishvpatel010",
 };
 
+const name = "Vishv Patel";
+
+const header = {
+    title: "",
+    desc: "",
+}
 export {
     logotext,
-    socialprofils
+    socialprofils, 
+    name,
+    header,
 }

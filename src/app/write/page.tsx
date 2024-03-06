@@ -27,6 +27,9 @@ const WritePage = () => {
   const [catSlug, setCatSlug] = useState("");
 
   useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push("/");
+    }
     const storage = getStorage(app);
     const upload = () => {
       const name = new Date().getTime() + file.name;
@@ -59,14 +62,14 @@ const WritePage = () => {
     };
 
     file && upload();
-  }, [file]);
+  }, [file, status, router]);
 
   if (status === "loading") {
     return <div className={styles.loading}>Loading...</div>;
   }
 
   if (status === "unauthenticated") {
-    // router.push("/");
+    router.push("/");
   }
 
   const slugify = (str) =>
